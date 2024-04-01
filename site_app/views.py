@@ -2,7 +2,8 @@ from django.shortcuts import render, redirect
 from . models import Item
 
 def first_page(request):
-    return redirect('page/1')
+    # return redirect('page/1')
+    return render(request, 'index.html')
 
 def page(request, pk):
     nav_objects = Item.objects.values('id','item_nav', 'item_nav_position').filter(item_nav_position__gt=0).order_by('-item_nav_position')
