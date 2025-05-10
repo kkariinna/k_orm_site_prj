@@ -10,7 +10,7 @@
                 {% for object in nav_objects %}
 {#                    {{ pk }}: {{ object.id }}: {{ object.item_nav }}#}
                     <li class="nav-item">
-                        <a class="{% if pk == object.id %}nav-link active{% else %}nav-link{% endif %}"
+                        <a style="color:black; text-decoration:none" class="{% if pk == object.id %}nav-link active{% else %}nav-link{% endif %}"
                            href="{% url 'site_app:page' pk=object.id %}">{{ object.item_nav }}</a>
                     </li>
                 {% endfor %}
@@ -25,4 +25,3 @@
 
     </div>
 {% endblock %}
-
